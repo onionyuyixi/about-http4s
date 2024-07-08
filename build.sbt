@@ -10,6 +10,9 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       "org.http4s"      %% "http4s-blaze-server" % Http4sVersion,
       "org.http4s"      %% "http4s-dsl"          % Http4sVersion,
-      "ch.qos.logback"  %  "logback-classic"     % "1.2.3"
+      "ch.qos.logback"  %  "logback-classic"     % "1.5.6",
+      "io.getquill" %% "quill-jasync-postgres" % "4.8.0",
+      "org.testcontainers" % "postgresql" % "1.19.8",
+      "org.postgresql" % "postgresql" % "42.7.3",
     )
   )

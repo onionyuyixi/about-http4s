@@ -17,7 +17,7 @@ object TimeApp extends IOApp{
   ).orNotFound
 
   private def stream(args:List[String]):fs2.Stream[IO,ExitCode] =
-    BlazeServerBuilder[IO](ExecutionContext.global)
+    BlazeServerBuilder[IO]()
       .bindHttp(8000,"0.0.0.0")
       .withHttpApp(httpApp)
       .serve

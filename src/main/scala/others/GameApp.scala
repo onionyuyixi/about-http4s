@@ -13,7 +13,7 @@ object GameApp extends IOApp{
   }.orNotFound
 
   private def stream(args:List[String]) =
-    BlazeServerBuilder[IO](ExecutionContext.global)
+    BlazeServerBuilder[IO]()
       .bindHttp(8080,"0.0.0.0")
       .withHttpApp(router)
       .serve

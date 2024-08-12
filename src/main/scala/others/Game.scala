@@ -1,3 +1,5 @@
+package others
+
 case class Game(playerA: Player, playerB: Player) {
 
   private val winner: Option[Player] =

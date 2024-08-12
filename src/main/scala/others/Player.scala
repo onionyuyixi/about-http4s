@@ -1,3 +1,5 @@
+package others
+
 case class Player(name: String, symbol: Symbol) {
   override def toString = s" Player ${name} with symbol ${symbol}"
 }

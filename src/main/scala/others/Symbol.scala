@@ -1,3 +1,5 @@
+package others
+
 sealed trait Symbol {
 
   protected def beats: List[Symbol]

@@ -1,5 +1,7 @@
-import java.time.{ZoneId, ZonedDateTime}
+package others
+
 import java.time.format.DateTimeFormatter
+import java.time.{ZoneId, ZonedDateTime}
 
 case class TimerPrinter(formatter:DateTimeFormatter){
 

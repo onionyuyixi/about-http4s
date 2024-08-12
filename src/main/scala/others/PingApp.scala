@@ -1,3 +1,4 @@
+package others
 
 import cats.effect.{ExitCode, IO, IOApp}
 import org.http4s.blaze.server.BlazeServerBuilder
@@ -6,12 +7,11 @@ import org.http4s.server.Router
 
 import scala.concurrent.ExecutionContext
 
-
-object TimeApp extends IOApp{
+object PingApp extends IOApp{
 
 
   private  val httpApp = Router(
-    "/"-> new TimeApi().service
+    "/"-> new PingApi().routes
   ).orNotFound
 
   private def stream(args:List[String]):fs2.Stream[IO,ExitCode] =

@@ -105,7 +105,7 @@ object ErrorParamApi {
   }
 
   object LongParamMatcher extends OptionalValidatingQueryParamDecoderMatcher[Long]("long")
-  val routes1 = HttpRoutes.of[IO]{
+  val routes1: HttpRoutes[IO] = HttpRoutes.of[IO]{
     case GET -> Root / "number" :? LongParamMatcher(maybeNumber) =>
       val _: Option[cats.data.ValidatedNel[org.http4s.ParseFailure, Long]] = maybeNumber
       maybeNumber match {
